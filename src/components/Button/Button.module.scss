@@ -1,0 +1,98 @@
+.default {
+  min-width: 150px;
+  min-height: 50px;
+  border: 2px solid #C4C4C4;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  justify-content: center;
+  /* Black 2 */
+  background-color: transparent;
+  color: #3F3F3F;
+
+}
+
+.default:hover {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #3F3F3F;
+  //background: #FFFFFF;
+  border: 2px solid #828282;
+}
+
+.primary {
+  min-width: 150px;
+  min-height: 50px;
+  border: none;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+  background: #000000;
+}
+
+.primary:hover {
+
+  background: #EB5757;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.secondary {
+  justify-content: center;
+  min-width: 114px;
+  min-height: 40px;
+  background: #F0F2F2;
+  border: 2px solid #C4C4C4;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #828282;
+}
+
+.secondary:hover {
+  background-color: #F0F2F2;
+  border: 2px solid #828282;
+}

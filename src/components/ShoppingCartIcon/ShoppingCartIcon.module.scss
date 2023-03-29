@@ -1,0 +1,29 @@
+.shoppingCartIcon{
+
+}
+.shoppingCartIconContent{
+  display: flex;
+  flex-direction: column;
+  .shoppingCartIconContentTopItem{
+    font-family: 'Roboto Medium' !important;
+    font-size: 12px !important;
+    line-height: 30px !important;
+    text-transform: none !important;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+  }
+  .shoppingCartIconContentBottomItem{
+    font-family: 'Roboto' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    letter-spacing: 0.01em !important;
+
+    color: #FFFFFF;
+  }
+}
