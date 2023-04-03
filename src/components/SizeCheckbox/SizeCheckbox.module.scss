@@ -1,0 +1,29 @@
+.sizeCheckbox {
+  width: 46px;
+  height: 46px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 68px;
+  /* or 486% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+  border: 1px solid #C4C4C4;
+}
+
+.activeSizeCheckbox {
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.notFoundSizeCheckbox {
+
+}
+.sizeCheckbox:hover{
+  border: 2px solid #828282;
+  color: #828282;
+}

@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "name": "TEST",
+      "price": 9999,
+      "color": [
+        "#73513C",
+        "#971E34",
+        "#AAABA7",
+        "#2B9FA7",
+        "#CBA13E",
+        "#DAB1B1"
+      ],
+      "size": [
+        "osfa"
+      ],
+      "sale": 100,
+      "image": "https://robohash.org/TEST",
+      "id": 4
+    },
+    {
+      "name": "Erin Hale",
+      "size": [
+        "w52",
+        "w34",
+        "w35",
+        "w29",
+        "w28",
+        "w27",
+        "w26",
+        "w32",
+        "w33"
+      ],
+      "color": [
+        "#2B9FA7",
+        "#24426A",
+        "#C2BEB6",
+        "#666689",
+        "#971E34"
+      ],
+      "price": 534,
+      "sale": 0,
+      "image": "https://robohash.org/Uuunyqueee",
+      "id": 6
+    },
+    {
+      "name": "Noelani Tyson",
+      "size": [
+        "w52",
+        "w44"
+      ],
+      "color": [
+        "#73513C",
+        "#DAB1B1"
+      ],
+      "price": 496,
+      "sale": 0,
+      "image": "https://robohash.org/Uunieke",
+      "id": 9
+    },
+    {
+      "name": "Dacey Sutton",
+      "size": [
+        "w50",
+        "w48"
+      ],
+      "color": [
+        "#971E34",
+        "#CBA13E",
+        "#2B9FA7"
+      ],
+      "price": 924,
+      "sale": 0,
+      "image": "https://robohash.org/Unieque",
+      "id": 11
+    },
+    {
+      "name": "Wyatt Frazier",
+      "size": [
+        "w50"
+      ],
+      "color": [
+        "#73513C",
+        "#18574A",
+        "#292A2D",
+        "#F3ECE2"
+      ],
+      "price": 182,
+      "sale": 0,
+      "image": "https://robohash.org/Eoooniequee",
+      "id": 12
+    }
+  ]
+}

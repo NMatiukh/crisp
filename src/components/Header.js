@@ -13,18 +13,6 @@ const Header = styled(AntdHeader)`
   img{
     cursor: pointer;
   }
-  .ant-btn-link, .ant-typography{
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    text-transform: uppercase;
-    color: #fff;
-  }
-  .ant-btn-link:hover, .ant-typography:hover{
-    color: #fff;
-  }
   
 `;
 export default Header;

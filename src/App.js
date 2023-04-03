@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Layout, Image, ConfigProvider, Button, Space, Typography, Carousel} from "antd";
 import CustomButton from './components/Button/Button'
 import {Content, Footer} from "antd/es/layout/layout";
@@ -10,13 +10,11 @@ import theme from "./theme";
 import {HeartOutlined, SearchOutlined} from "@ant-design/icons";
 import ShoppingCartIcon from "./components/ShoppingCartIcon/ShoppingCartIcon";
 import Banner from "./components/Banner/Banner";
-const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-};
+import fonts from './style/fonts.module.scss'
+import Admin from "./pages/Admin/Admin";
+import {useDispatch} from "react-redux";
+import {getProducts} from "./redux/actions";
+
 const items = [
     {
         label: 'home',
@@ -40,26 +38,31 @@ const items = [
     },
 ]
 const App = () => {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getProducts())
+    }, []);
     return (
         <ConfigProvider theme={theme}>
             <Layout className={scss.layout}>
                 <Header>
                     <Image src={logo} preview={false}/>
                     <Space>
-                        <Menu mode="horizontal" items={items}/>
+                        <Menu mode="horizontal" items={items} className={fonts.Oswald_Regular_14_AA}/>
                         <Button type={"link"} icon={<SearchOutlined/>}>{'search'.toUpperCase()}</Button>
                     </Space>
                     <Space>
-                        <Typography.Link>SIGN IN</Typography.Link>
-                        <Typography.Link>CREATE AN ACCOUNT</Typography.Link>
-                        <HeartOutlined />
+                        <span>SIGN IN</span>
+                        <span>CREATE AN ACCOUNT</span>
+                        <HeartOutlined/>
                         <ShoppingCartIcon/>
                     </Space>
                 </Header>
-                <Content>
-                    <Carousel autoplay>
-                        <Banner/>
-                    </Carousel>
+                <Content className={scss.content}>
+                    {/*<Carousel autoplay>*/}
+                    {/*    <Banner/>*/}
+                    {/*</Carousel>*/}
+                    <Admin/>
                 </Content>
                 <Footer>Footer</Footer>
             </Layout>

@@ -1,6 +1,9 @@
+button{
+  cursor: pointer;
+}
 .default {
-  min-width: 150px;
-  min-height: 50px;
+  width: 150px;
+  height: 50px;
   border: 2px solid #C4C4C4;
   font-family: 'Oswald';
   font-style: normal;
@@ -36,8 +39,8 @@
 }
 
 .primary {
-  min-width: 150px;
-  min-height: 50px;
+  width: 150px;
+  height: 50px;
   border: none;
   font-family: 'Oswald';
   font-style: normal;
@@ -75,8 +78,8 @@
 
 .secondary {
   justify-content: center;
-  min-width: 114px;
-  min-height: 40px;
+  width: 114px;
+  height: 40px;
   background: #F0F2F2;
   border: 2px solid #C4C4C4;
   font-family: 'Oswald';
@@ -95,4 +98,26 @@
 .secondary:hover {
   background-color: #F0F2F2;
   border: 2px solid #828282;
+}
+
+.banner{
+  width: 175px;
+  height: 56px;
+  border: 2px solid #000000;
+  /* Oswald Medium 18 AA */
+
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: #000000;
+
 }

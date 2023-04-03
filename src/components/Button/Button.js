@@ -19,6 +19,11 @@ const Button = (props) => {
                 {props.children}
             </button>
         }
+        case 'banner': {
+            return <button className={scss.banner}>
+                {props.children}
+            </button>
+        }
     }
 };
 
