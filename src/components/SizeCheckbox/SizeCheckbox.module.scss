@@ -13,6 +13,7 @@
   text-transform: uppercase;
   justify-content: center;
   border: 1px solid #C4C4C4;
+  cursor: pointer;
 }
 
 .activeSizeCheckbox {
@@ -21,9 +22,10 @@
 }
 
 .notFoundSizeCheckbox {
-
+  background: linear-gradient(to bottom left, transparent calc(50% - 1px), #C4C4C4 calc(50% - 1px), #C4C4C4 50%, transparent 50%);
 }
-.sizeCheckbox:hover{
+
+.sizeCheckbox:hover {
   border: 2px solid #828282;
   color: #828282;
 }

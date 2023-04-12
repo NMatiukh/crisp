@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Layout, Image, ConfigProvider, Button, Space, Typography, Carousel} from "antd";
 import CustomButton from './components/Button/Button'
 import {Content, Footer} from "antd/es/layout/layout";
@@ -12,33 +12,38 @@ import ShoppingCartIcon from "./components/ShoppingCartIcon/ShoppingCartIcon";
 import Banner from "./components/Banner/Banner";
 import fonts from './style/fonts.module.scss'
 import Admin from "./pages/Admin/Admin";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {getProducts} from "./redux/actions";
+import ProductCard from "./components/ProductCard/ProductCard";
+import ProductPage from "./pages/ProductPage/ProductPage";
+import {Link, Outlet} from "react-router-dom";
 
 const items = [
     {
-        label: 'home',
+        label: <Link to={'/home'}>Home</Link>,
         key: 'home',
     },
     {
-        label: 'Shop',
-        key: 'Shop',
+        label: <Link to={'/shop'}>Shop</Link>,
+        key: 'shop',
     },
     {
-        label: 'blog',
+        label: <Link to={'/blog'}>Blog</Link>,
         key: 'blog',
     },
     {
-        label: 'Sale',
-        key: 'Sale',
+        label: <Link to={'/sale'}>Sale</Link>,
+        key: 'sale',
     },
     {
-        label: 'contact us',
-        key: 'contact us',
+        label: <Link to={'/contact_us'}>Contact us</Link>,
+        key: 'contact_us',
     },
 ]
 const App = () => {
     const dispatch = useDispatch()
+    const products = useSelector(state => state.products.data)
+    const [activeProduct, setActiveProduct] = useState(null);
     useEffect(() => {
         dispatch(getProducts())
     }, []);
@@ -62,7 +67,19 @@ const App = () => {
                     {/*<Carousel autoplay>*/}
                     {/*    <Banner/>*/}
                     {/*</Carousel>*/}
-                    <Admin/>
+                    {/*<Admin/>*/}
+                    {/*<Space wrap>*/}
+                    {/*    {*/}
+                    {/*        products.map(value => <ProductCard onClick={() => setActiveProduct(value)} product={value}*/}
+                    {/*                                           key={value.id}/>)*/}
+                    {/*    }*/}
+                    {/*</Space>*/}
+                    {/*{*/}
+                    {/*    activeProduct ?*/}
+                    {/*        <ProductPage product={activeProduct}/> : null*/}
+
+                    {/*}*/}
+                    <Outlet/>
                 </Content>
                 <Footer>Footer</Footer>
             </Layout>

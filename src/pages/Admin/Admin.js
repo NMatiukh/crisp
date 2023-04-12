@@ -1,9 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import style from './Admin.module.scss';
 import {Col, Menu, Row} from "antd";
 import {MailOutlined, SkinOutlined} from "@ant-design/icons";
 import AllProducts from "../AllProducts/AllProducts";
 import AddProduct from "../AddProduct/AddProduct";
+import {Link, Outlet, useLocation, useSearchParams} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {getProducts} from "../../redux/actions";
 function getItem(label, key, icon, children, type) {
     return {
         key,
@@ -15,8 +18,8 @@ function getItem(label, key, icon, children, type) {
 }
 const items = [
     getItem("Products", 'products',<SkinOutlined />, [
-        getItem('Products', 'all_products', null),
-        getItem('Add product', 'add_product', null, null, null),
+        getItem(<Link to={'all_products'}>Products</Link>, 'all_products', null),
+        getItem(<Link to={'add_product'}>Add product</Link>, 'add_product', null, null, null),
     ])
 ];
 export const options = [
@@ -152,26 +155,20 @@ export const optionsColor = [
 
 ];
 const Admin = () => {
-    const [activeKey, setActiveKey] = useState('');
-    const onClick = (e) => {
-        setActiveKey(e.key)
-    };
-    function menuRender(key) {
-        switch (key) {
-            case 'all_products': {
-                return <AllProducts/>
-            }
-            case 'add_product': {
-                return <AddProduct/>
-            }
-        }
-    }
+    const products = useSelector(store => store.products.data)
+    const dispatch = useDispatch()
+    let location = useLocation();
+    let [searchParams, setSearchParams] = useSearchParams();
+    useEffect(() => {
+        dispatch(getProducts())
+        // console.log(location)
+    }, [location]);
+    console.log(products.filter(item => item.name.includes(searchParams.get('name'))))
     return (
         <Row>
             <Col span={4}>
                 <Menu
                     theme={'dark'}
-                    onClick={onClick}
                     style={{
                         width: 256,
                     }}
@@ -180,9 +177,9 @@ const Admin = () => {
                 />
             </Col>
             <Col span={20} style={{padding: "0 50px"}}>
-                {
-                    menuRender(activeKey)
-                }
+                <Outlet>
+
+                </Outlet>
             </Col>
 
         </Row>

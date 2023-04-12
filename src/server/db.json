@@ -1,94 +1,115 @@
 {
   "products": [
     {
-      "name": "TEST",
-      "price": 9999,
-      "color": [
-        "#73513C",
-        "#971E34",
-        "#AAABA7",
-        "#2B9FA7",
-        "#CBA13E",
-        "#DAB1B1"
-      ],
+      "name": "Fredericka Norris",
       "size": [
-        "osfa"
-      ],
-      "sale": 100,
-      "image": "https://robohash.org/TEST",
-      "id": 4
-    },
-    {
-      "name": "Erin Hale",
-      "size": [
-        "w52",
-        "w34",
-        "w35",
-        "w29",
-        "w28",
-        "w27",
-        "w26",
+        "w48",
+        "w44",
+        "w33",
         "w32",
-        "w33"
+        "w40",
+        "w42"
       ],
-      "color": [
-        "#2B9FA7",
-        "#24426A",
-        "#C2BEB6",
-        "#666689",
-        "#971E34"
-      ],
-      "price": 534,
-      "sale": 0,
-      "image": "https://robohash.org/Uuunyqueee",
-      "id": 6
-    },
-    {
-      "name": "Noelani Tyson",
-      "size": [
-        "w52",
-        "w44"
-      ],
+      "price": 310,
+      "sale": 3,
       "color": [
         "#73513C",
-        "#DAB1B1"
+        "#DAB1B1",
+        "#666689"
       ],
-      "price": 496,
-      "sale": 0,
-      "image": "https://robohash.org/Uunieke",
-      "id": 9
+      "images": {
+        "#292A2D": "https://robohash.org/Iuneeeqe",
+        "#F3ECE2": "https://robohash.org/Yooniiqeee",
+        "#24426A": "https://robohash.org/Yooonekkeee",
+        "#18574A": "https://robohash.org/Uneeeikee",
+        "#666689": "https://robohash.org/Yoooniqeee",
+        "#C2BEB6": "https://robohash.org/Ioonyqeee",
+        "#AAABA7": "https://robohash.org/Yoooneeeke",
+        "#971E34": "https://robohash.org/Yooonykeee",
+        "#CBA13E": "https://robohash.org/Yooonyquee",
+        "#73513C": "https://robohash.org/Yoonyqee",
+        "#DAB1B1": "https://robohash.org/Yoooneikkee",
+        "#2B9FA7": "https://robohash.org/Uuuniiiqe"
+      },
+      "id": 1
     },
     {
-      "name": "Dacey Sutton",
+      "name": "Christopher Dalton",
       "size": [
-        "w50",
-        "w48"
+        "w52"
       ],
+      "price": 617,
+      "sale": 2,
       "color": [
-        "#971E34",
-        "#CBA13E",
-        "#2B9FA7"
+        "#292A2D"
       ],
-      "price": 924,
-      "sale": 0,
-      "image": "https://robohash.org/Unieque",
-      "id": 11
+      "images": {
+        "#292A2D": "https://robohash.org/Eeooonykkeee",
+        "#F3ECE2": "https://robohash.org/Uneeikkkee",
+        "#24426A": "https://robohash.org/Uniquee",
+        "#18574A": "https://robohash.org/Unikkkee",
+        "#666689": "https://robohash.org/Uunieqe",
+        "#C2BEB6": "https://robohash.org/Iuniiikkkee",
+        "#AAABA7": "https://robohash.org/Unequee",
+        "#971E34": "https://robohash.org/Yoonekkeee",
+        "#CBA13E": "https://robohash.org/Uuuniequee",
+        "#73513C": "https://robohash.org/Yoonyke",
+        "#DAB1B1": "https://robohash.org/Unyqueee",
+        "#2B9FA7": "https://robohash.org/Yuuniequee"
+      },
+      "id": 2
     },
     {
-      "name": "Wyatt Frazier",
+      "name": "Garrett Oneal",
       "size": [
         "w50"
       ],
+      "price": 381,
+      "sale": 3,
       "color": [
-        "#73513C",
-        "#18574A",
-        "#292A2D",
-        "#F3ECE2"
+        "#73513C"
       ],
-      "price": 182,
-      "sale": 0,
-      "image": "https://robohash.org/Eoooniequee",
-      "id": 12
+      "images": {
+        "#292A2D": "https://robohash.org/Yoooneeike",
+        "#F3ECE2": "https://robohash.org/Uuniekkkee",
+        "#24426A": "https://robohash.org/Eeuneeqe",
+        "#18574A": "https://robohash.org/Yooneeekkee",
+        "#666689": "https://robohash.org/Uuunyque",
+        "#C2BEB6": "https://robohash.org/Yoonykee",
+        "#AAABA7": "https://robohash.org/Uuniiquee",
+        "#971E34": "https://robohash.org/Unequeee",
+        "#CBA13E": "https://robohash.org/Yoooniiqueee",
+        "#73513C": "https://robohash.org/Uuunyke",
+        "#DAB1B1": "https://robohash.org/Euuneequeee",
+        "#2B9FA7": "https://robohash.org/Yooniekkkeee"
+      },
+      "id": 3
+    },
+    {
+      "name": "Sacha Daniels",
+      "size": [
+        "w52"
+      ],
+      "price": 725,
+      "sale": 1,
+      "color": [
+        "#2B9FA7"
+      ],
+      "images": {
+        "#292A2D": "https://robohash.org/Yooniqueee",
+        "#F3ECE2": "https://robohash.org/Yuneeequee",
+        "#24426A": "https://robohash.org/Yooneeequeee",
+        "#18574A": "https://robohash.org/Yooniiikke",
+        "#666689": "https://robohash.org/Yooniiiqueee",
+        "#C2BEB6": "https://robohash.org/Yooonykkee",
+        "#AAABA7": "https://robohash.org/Yooonyquee",
+        "#971E34": "https://robohash.org/Yooniekeee",
+        "#CBA13E": "https://robohash.org/Yooniikkee",
+        "#73513C": "https://robohash.org/Iooniekeee",
+        "#DAB1B1": "https://robohash.org/Yoooniekkee",
+        "#2B9FA7": "https://robohash.org/Yuunykkee"
+      },
+      "id": 4
     }
   ]
 }

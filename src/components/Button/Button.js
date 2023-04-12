@@ -1,26 +1,30 @@
 import React from 'react';
 import scss from './Button.module.scss'
+import {Space} from "antd";
+
 const Button = (props) => {
 
     switch (props.type) {
         default: {
-            return <button className={scss.default}>
-                {props.icon || null}
-                {props.children}
+            return <button {...props} className={scss.default}>
+                <Space>
+                    {props.icon || null}
+                    {props.children}
+                </Space>
             </button>
         }
         case 'secondary': {
-            return <button className={scss.secondary}>
+            return <button onClick={props.onClick}  className={scss.secondary}>
                 {props.children}
             </button>
         }
         case 'primary': {
-            return <button className={scss.primary}>
+            return <button onClick={props.onClick}  className={scss.primary}>
                 {props.children}
             </button>
         }
         case 'banner': {
-            return <button className={scss.banner}>
+            return <button onClick={props.onClick}  className={scss.banner}>
                 {props.children}
             </button>
         }
