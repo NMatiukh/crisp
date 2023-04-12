@@ -1,7 +1,8 @@
 .shoppingCartIcon{
-
+  cursor: pointer;
 }
 .shoppingCartIconContent{
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }

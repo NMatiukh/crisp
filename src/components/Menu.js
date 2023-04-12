@@ -6,6 +6,7 @@ const Menu = styled(AntdMenu)`
   background-color: #000;
   text-transform: uppercase;
   min-width: 400px;
+  color: #FFFFFF !important;
   .ant-menu-item-active::after {
     background-color: #EB5757 !important;
     border-bottom-color: #EB5757 !important;

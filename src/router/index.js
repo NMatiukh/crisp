@@ -10,10 +10,15 @@ import Admin from "../pages/Admin/Admin";
 import AllProducts from "../pages/AllProducts/AllProducts";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import EditProduct from "../pages/EditProduct/EditProduct";
+import ShoppingCart from "../pages/ShoppingCart/ShoppingCart";
+import ProductCard from "../components/ProductCard/ProductCard";
+import ProductPage from "../pages/ProductPage/ProductPage";
 
 
 const test = {
-    HOME: "/home"
+    HOME: "/home",
+    SHOPPING_CART: '/shoppingCart',
+    ProductCard: '/shop/:productId'
 }
 
 
@@ -23,7 +28,7 @@ const publicRoutes = createBrowserRouter([
         element: <App/>,
         children: [
             {
-                path: '/home',
+                path: test.HOME,
                 element: <Home/>
             },
             {
@@ -42,6 +47,14 @@ const publicRoutes = createBrowserRouter([
                 path: '/contact_us',
                 element: <ContactUs/>
             },
+            {
+                path: test.SHOPPING_CART,
+                element: <ShoppingCart/>
+            },
+            {
+                path: test.ProductCard,
+                element: <ProductPage/>
+            }
         ]
     },
     {

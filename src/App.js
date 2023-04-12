@@ -51,7 +51,9 @@ const App = () => {
         <ConfigProvider theme={theme}>
             <Layout className={scss.layout}>
                 <Header>
-                    <Image src={logo} preview={false}/>
+                    <Link to={'/home'}>
+                        <Image src={logo} preview={false}/>
+                    </Link>
                     <Space>
                         <Menu mode="horizontal" items={items} className={fonts.Oswald_Regular_14_AA}/>
                         <Button type={"link"} icon={<SearchOutlined/>}>{'search'.toUpperCase()}</Button>
@@ -60,25 +62,17 @@ const App = () => {
                         <span>SIGN IN</span>
                         <span>CREATE AN ACCOUNT</span>
                         <HeartOutlined/>
-                        <ShoppingCartIcon/>
+                        <Link to={'shoppingCart'}>
+                            <ShoppingCartIcon/>
+                        </Link>
                     </Space>
                 </Header>
                 <Content className={scss.content}>
-                    {/*<Carousel autoplay>*/}
-                    {/*    <Banner/>*/}
-                    {/*</Carousel>*/}
-                    {/*<Admin/>*/}
-                    {/*<Space wrap>*/}
-                    {/*    {*/}
-                    {/*        products.map(value => <ProductCard onClick={() => setActiveProduct(value)} product={value}*/}
-                    {/*                                           key={value.id}/>)*/}
-                    {/*    }*/}
-                    {/*</Space>*/}
-                    {/*{*/}
-                    {/*    activeProduct ?*/}
-                    {/*        <ProductPage product={activeProduct}/> : null*/}
-
-                    {/*}*/}
+                       <Link to={'admin'}>
+                           <Button>
+                               Admin
+                           </Button>
+                       </Link>
                     <Outlet/>
                 </Content>
                 <Footer>Footer</Footer>

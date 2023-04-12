@@ -161,9 +161,7 @@ const Admin = () => {
     let [searchParams, setSearchParams] = useSearchParams();
     useEffect(() => {
         dispatch(getProducts())
-        // console.log(location)
     }, [location]);
-    console.log(products.filter(item => item.name.includes(searchParams.get('name'))))
     return (
         <Row>
             <Col span={4}>

@@ -16,7 +16,7 @@ export default function shopReducer(state = initialState, action) {
             return {...state, item: action.payload}
         }
         case CREATE_SHOP_ITEM: {
-            console.log(action.payload)
+            return {...state, data: [...state.data, action.payload]}
         }
         case EDIT_SHOP_ITEM: {
             return {
