@@ -1,0 +1,5 @@
+export const CREATE_SHOP_ITEM = 'CREATE_SHOP_ITEM';
+export const DELETE_SHOP_ITEM = 'DELETE_SHOP_ITEM';
+export const EDIT_SHOP_ITEM = 'EDIT_SHOP_ITEM';
+export const GET_SHOP_ITEM = 'GET_SHOP_ITEM';
+export const GET_SHOP_ITEMS = 'GET_SHOP_ITEMS';

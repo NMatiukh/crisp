@@ -1,0 +1,23 @@
+.colorItem {
+  width: 17px;
+  height: 17px;
+}
+
+.colorItemBlock {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+
+.activeColorItem {
+  border: 2px solid #000000;
+}
+
+.colorItemBlock:hover {
+  border: 2px solid #C4C4C4;
+}
