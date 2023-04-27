@@ -13,8 +13,10 @@ const ColorsPick = ({colors, setActiveColor, activeColor, allColors}) => {
             } else {
                 setActiveColor([...activeColor, value])
             }
+        } else {
+            setActiveColor(value)
+
         }
-        setActiveColor(value)
     }
     return (
         <Space wrap>

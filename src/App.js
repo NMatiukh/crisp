@@ -46,7 +46,8 @@ const App = () => {
     const products = useSelector(state => state.firestore.ordered.products)
     const auth = useSelector(state => state.firebase.auth)
     useFirestoreConnect(() => [
-        { collection: 'products'}
+        {collection: 'products'},
+        {collection: 'banners'}
     ])
     return (
         <ConfigProvider theme={theme}>

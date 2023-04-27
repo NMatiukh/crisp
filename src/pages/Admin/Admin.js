@@ -8,6 +8,7 @@ import {Link, Outlet, useLocation, useSearchParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {getProducts} from "../../redux/actions";
 import {useFirestoreConnect} from "react-redux-firebase";
+
 function getItem(label, key, icon, children, type) {
     return {
         key,
@@ -17,10 +18,15 @@ function getItem(label, key, icon, children, type) {
         type,
     };
 }
+
 const items = [
-    getItem("Products", 'products',<SkinOutlined />, [
+    getItem("Products", 'products', <SkinOutlined/>, [
         getItem(<Link to={'all_products'}>Products</Link>, 'all_products', null),
         getItem(<Link to={'add_product'}>Add product</Link>, 'add_product', null, null, null),
+    ]),
+    getItem("Banners", 'banners', <SkinOutlined/>, [
+        getItem(<Link to={'all_banners'}>Banners</Link>, 'all_banners', null),
+        getItem(<Link to={'add_banner'}>Add banner</Link>, 'add_banner', null, null, null),
     ])
 ];
 export const options = [
@@ -161,7 +167,8 @@ const Admin = () => {
     let location = useLocation();
     let [searchParams, setSearchParams] = useSearchParams();
     useFirestoreConnect(() => [
-        { collection: 'products'}
+        {collection: 'products'},
+        {collection: 'banners'}
     ])
     return (
         <Row>
@@ -178,7 +185,6 @@ const Admin = () => {
             <Col span={20} style={{padding: "0 50px"}}>
                 <Outlet/>
             </Col>
-
         </Row>
     );
 };

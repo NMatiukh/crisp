@@ -11,8 +11,9 @@ const SizeCheckbox = ({size, setActiveSize, activeSize, allSize}) => {
             } else {
                 setActiveSize([...activeSize, value])
             }
+        } else {
+            setActiveSize(value)
         }
-        setActiveSize(value)
     }
     const optionsSize = allSize ? null : options.map(value => {
         return {...value, ...{status: size.includes(value.value)}}

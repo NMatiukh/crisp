@@ -15,6 +15,9 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import ProductPage from "../pages/ProductPage/ProductPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import AllBanners from "../pages/AllBanners/AllBanners";
+import AddBanner from "../pages/AddBanner/AddBanner";
+import EditBanner from "../pages/EditBanner/EditBanner";
 
 
 const test = {
@@ -74,7 +77,19 @@ const publicRoutes = createBrowserRouter([
             {
                 path: "all_products/:productId",
                 element: <EditProduct/>
-            }
+            },
+            {
+                path: "all_banners",
+                element: <AllBanners/>
+            },
+            {
+                path: "add_banner",
+                element: <AddBanner/>
+            },
+            {
+                path: "all_banners/:bannerId",
+                element: <EditBanner/>
+            },
         ]
     },
     {
