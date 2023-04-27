@@ -5,11 +5,14 @@ import {options} from "../../pages/Admin/Admin";
 
 const SizeCheckbox = ({size, setActiveSize, activeSize, allSize}) => {
     const onDivClick = (value) => {
-        if (activeSize.includes(value)) {
-            setActiveSize(activeSize.filter(item => item !== value))
-        } else {
-            setActiveSize([...activeSize, value])
+        if (allSize) {
+            if (activeSize.includes(value)) {
+                setActiveSize(activeSize.filter(item => item !== value))
+            } else {
+                setActiveSize([...activeSize, value])
+            }
         }
+        setActiveSize(value)
     }
     const optionsSize = allSize ? null : options.map(value => {
         return {...value, ...{status: size.includes(value.value)}}
