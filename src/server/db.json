@@ -36,7 +36,12 @@
     {
       "name": "Christopher Dalton",
       "size": [
-        "w52"
+        "w52",
+        "w34",
+        "w36",
+        "w35",
+        "w33",
+        "w42"
       ],
       "price": 617,
       "sale": 2,
@@ -62,7 +67,18 @@
     {
       "name": "Garrett Oneal",
       "size": [
-        "w50"
+        "w50",
+        "w33",
+        "w34",
+        "w35",
+        "w36",
+        "w30",
+        "w28",
+        "w27",
+        "w26",
+        "w32",
+        "w40",
+        "w42"
       ],
       "price": 381,
       "sale": 3,
@@ -88,7 +104,10 @@
     {
       "name": "Sacha Daniels",
       "size": [
-        "w52"
+        "w52",
+        "w34",
+        "w31",
+        "w32"
       ],
       "price": 725,
       "sale": 1,
@@ -141,6 +160,38 @@
         "#2B9FA7": "https://robohash.org/Yooniikkeee"
       },
       "id": 5
+    },
+    {
+      "name": "Fuller Gill",
+      "size": [
+        "w34",
+        "w35",
+        "w46",
+        "w48"
+      ],
+      "price": 247,
+      "sale": 0,
+      "color": [
+        "#AAABA7",
+        "#971E34",
+        "#CBA13E",
+        "#DAB1B1"
+      ],
+      "images": {
+        "#292A2D": "https://robohash.org/Yooonyqe",
+        "#F3ECE2": "https://robohash.org/Eeeuuunieqe",
+        "#24426A": "https://robohash.org/Yoonequeee",
+        "#18574A": "https://robohash.org/Uuniekee",
+        "#666689": "https://robohash.org/Yoooneeekkeee",
+        "#C2BEB6": "https://robohash.org/Uuuneeekkke",
+        "#AAABA7": "https://robohash.org/Iuuneeque",
+        "#971E34": "https://robohash.org/Yoooneekkee",
+        "#CBA13E": "https://robohash.org/Yooonyqe",
+        "#73513C": "https://robohash.org/Yooneekeee",
+        "#DAB1B1": "https://robohash.org/Yoonekke",
+        "#2B9FA7": "https://robohash.org/Yoonieque"
+      },
+      "id": 6
     }
   ]
 }

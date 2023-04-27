@@ -11,8 +11,8 @@ const ShoppingCartIcon = (props) => {
         <Space className={style.shoppingCartIcon}>
             <ShoppingOutlined/>
             <div className={style.shoppingCartIconContent}>
-                <span> {!shopData.length ? 'Shopping Cart': `${shopData.length} item(s)` }</span>
-                <span>{shopData.reduce((a, b) => a + b.price, 0).toFixed(2)} EUR</span>
+                <span className={style.shoppingCartIconContentItem1}> {!shopData.length ? 'Shopping Cart' : `${shopData.length} item(s)`}</span>
+                <span className={style.shoppingCartIconContentItem2}>{shopData.reduce((a, b) => a + b.price * b.quantity, 0).toFixed(2)} EUR</span>
             </div>
         </Space>
     );

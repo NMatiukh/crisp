@@ -1,7 +1,7 @@
 import {LOADER} from "../types/products";
 
 const initialState = {
-    loader: false,
+    loader: true,
 }
 
 export default function loaderReducer(state = initialState, action) {

@@ -17,6 +17,7 @@ import {getProducts} from "./redux/actions";
 import ProductCard from "./components/ProductCard/ProductCard";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import {Link, Outlet} from "react-router-dom";
+import {getFirebase, useFirestoreConnect} from "react-redux-firebase";
 
 const items = [
     {
@@ -42,11 +43,11 @@ const items = [
 ]
 const App = () => {
     const dispatch = useDispatch()
-    const products = useSelector(state => state.products.data)
-    const [activeProduct, setActiveProduct] = useState(null);
-    useEffect(() => {
-        dispatch(getProducts())
-    }, []);
+    const products = useSelector(state => state.firestore.ordered.products)
+    const auth = useSelector(state => state.firebase.auth)
+    useFirestoreConnect(() => [
+        { collection: 'products'}
+    ])
     return (
         <ConfigProvider theme={theme}>
             <Layout className={scss.layout}>
@@ -56,11 +57,28 @@ const App = () => {
                     </Link>
                     <Space>
                         <Menu mode="horizontal" items={items} className={fonts.Oswald_Regular_14_AA}/>
-                        <Button type={"link"} icon={<SearchOutlined/>}>{'search'.toUpperCase()}</Button>
+                        <Button className={scss.app_button_link} type={"link"}
+                                icon={<SearchOutlined/>}>{'search'.toUpperCase()}</Button>
                     </Space>
                     <Space>
-                        <span>SIGN IN</span>
-                        <span>CREATE AN ACCOUNT</span>
+                        {
+                            auth.uid ?
+                                <span style={{cursor: "pointer"}} onClick={() => {
+                                    getFirebase().auth().signOut()
+                                }}>
+                                    Logout
+                                </span> :
+                                <>
+                                    <Link to={'login'}>
+                                        <span>SIGN IN</span>
+
+                                    </Link>
+                                    <Link to={'register'}>
+                                        <span>CREATE AN ACCOUNT</span>
+                                    </Link>
+                                </>
+                        }
+
                         <HeartOutlined/>
                         <Link to={'shoppingCart'}>
                             <ShoppingCartIcon/>
@@ -68,11 +86,11 @@ const App = () => {
                     </Space>
                 </Header>
                 <Content className={scss.content}>
-                       <Link to={'admin'}>
-                           <Button>
-                               Admin
-                           </Button>
-                       </Link>
+                    {/*<Link to={'admin'}>*/}
+                    {/*    <Button>*/}
+                    {/*        Admin*/}
+                    {/*    </Button>*/}
+                    {/*</Link>*/}
                     <Outlet/>
                 </Content>
                 <Footer>Footer</Footer>

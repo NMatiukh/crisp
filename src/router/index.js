@@ -13,6 +13,8 @@ import EditProduct from "../pages/EditProduct/EditProduct";
 import ShoppingCart from "../pages/ShoppingCart/ShoppingCart";
 import ProductCard from "../components/ProductCard/ProductCard";
 import ProductPage from "../pages/ProductPage/ProductPage";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
 const test = {
@@ -74,6 +76,14 @@ const publicRoutes = createBrowserRouter([
                 element: <EditProduct/>
             }
         ]
+    },
+    {
+        path: '/login',
+        element: <Login/>
+    },
+    {
+        path: '/register',
+        element: <Register/>
     },
     {
         path: '*',

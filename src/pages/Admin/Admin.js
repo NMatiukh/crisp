@@ -7,6 +7,7 @@ import AddProduct from "../AddProduct/AddProduct";
 import {Link, Outlet, useLocation, useSearchParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {getProducts} from "../../redux/actions";
+import {useFirestoreConnect} from "react-redux-firebase";
 function getItem(label, key, icon, children, type) {
     return {
         key,
@@ -155,13 +156,13 @@ export const optionsColor = [
 
 ];
 const Admin = () => {
-    const products = useSelector(store => store.products.data)
+    const products = useSelector((state) => state.firestore.ordered.products);
     const dispatch = useDispatch()
     let location = useLocation();
     let [searchParams, setSearchParams] = useSearchParams();
-    useEffect(() => {
-        dispatch(getProducts())
-    }, [location]);
+    useFirestoreConnect(() => [
+        { collection: 'products'}
+    ])
     return (
         <Row>
             <Col span={4}>
@@ -175,9 +176,7 @@ const Admin = () => {
                 />
             </Col>
             <Col span={20} style={{padding: "0 50px"}}>
-                <Outlet>
-
-                </Outlet>
+                <Outlet/>
             </Col>
 
         </Row>

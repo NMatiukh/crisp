@@ -1,6 +1,6 @@
 import axios from "axios";
 import {CREATE_PRODUCT, DELETE_PRODUCT, EDIT_PRODUCT, GET_PRODUCT, GET_PRODUCTS, LOADER} from "../types/products";
-import {CREATE_SHOP_ITEM} from "../types/SHOP_ITEM";
+import {CREATE_SHOP_ITEM, EDIT_SHOP_ITEM} from "../types/SHOP_ITEM";
 
 const URL = 'http://localhost:3000/products'
 
@@ -69,6 +69,12 @@ export function editProduct(product) {
 export function createShopItem(shopItem) {
     return {
         type: CREATE_SHOP_ITEM,
+        payload: shopItem
+    }
+}
+export function editShopItem(shopItem) {
+    return {
+        type: EDIT_SHOP_ITEM,
         payload: shopItem
     }
 }

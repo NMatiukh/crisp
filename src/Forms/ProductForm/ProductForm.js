@@ -5,6 +5,7 @@ import {options, optionsColor} from "../../pages/Admin/Admin";
 import {useDispatch} from "react-redux";
 import {createProduct, editProduct} from "../../redux/actions";
 import {useNavigate} from "react-router-dom";
+import {db} from "../../firebase/firebase";
 
 const ProductForm = ({action, product, form}) => {
     const dispatch = useDispatch()
@@ -25,8 +26,13 @@ const ProductForm = ({action, product, form}) => {
 
         try {
             action === 'edit' ?
-                dispatch(editProduct({...values, ...{id: product.id}})) :
-                dispatch(createProduct(values))
+                db
+                    .collection('products')
+                    .doc(product.id)
+                    .update(values) :
+                db
+                    .collection('products')
+                    .add(values)
         } catch (e) {
             errorMessage()
         } finally {

@@ -8,8 +8,8 @@ import {useSelector} from "react-redux";
 
 const EditProduct = () => {
     const {productId} = useParams()
-    const product = useSelector(state => state.products.data.find(item => item.id.toString() === productId))
-    const loader = useSelector(state => state.loader.loader)
+    const product = useSelector(state => state.firestore.ordered.products?.find(item => item.id.toString() === productId))
+    const loader = useSelector(state => state.firestore.ordered.products !== undefined)
     const [form] = Form.useForm()
 
 
@@ -20,7 +20,7 @@ const EditProduct = () => {
     return (
         <>
             {
-                loader ? null : <ProductForm action={'edit'} product={product} form={form}/>
+                <ProductForm action={'edit'} product={product} form={form}/>
             }
         </>
 

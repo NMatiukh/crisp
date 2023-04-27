@@ -23,18 +23,15 @@ import {options, optionsColor} from "../Admin/Admin";
 import {useForm} from "antd/es/form/Form";
 import ProductForm from "../../Forms/ProductForm/ProductForm";
 import {Link} from "react-router-dom";
+import {db} from "../../firebase/firebase";
 
 const AllProducts = () => {
 
     const [open, setOpen] = useState(false);
     const [activeElement, setActiveElement] = useState(null);
     const [form] = Form.useForm()
-    const products = useSelector(store => store.products.data)
+    const products = useSelector((state) => state.firestore.ordered.products);
     const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(getProducts())
-    }, []);
-
     const showDrawer = (value) => {
         setActiveElement(value)
         setOpen(true);
@@ -99,7 +96,12 @@ const AllProducts = () => {
                         <Button icon={<EditOutlined/>}>Edit</Button>
                     </Link>
                     <Divider type={"vertical"}/>
-                    <Button icon={<DeleteOutlined/>} onClick={() => dispatch(deleteProduct(value))}
+                    <Button icon={<DeleteOutlined/>} onClick={() =>
+                        db
+                            .collection('products')
+                            .doc(value.id)
+                            .delete()
+                    }
                             danger>Delete</Button>
                 </Space>
             ),
